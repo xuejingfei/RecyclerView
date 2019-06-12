@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <Button
+            android:id="@+id/getAttachedScrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一级缓存"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp"
+    />
+
+    <Button
+            android:id="@+id/getCacheViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="二级缓存"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@id/getAttachedScrap"
+    />
+
+
+    <Button
+            android:id="@+id/getChangeScrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="三级缓存"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/getCacheViews"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp"/>
+    <Button
+            android:id="@+id/getRecyclerPool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="四级缓存"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/getChangeScrap"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp"/>
+
+    <Button
+            android:id="@+id/addItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add"
+            app:layout_constraintTop_toBottomOf="@id/getCacheViews"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <Button
+            android:id="@+id/deleteItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="deleteItem"
+            app:layout_constraintTop_toBottomOf="@id/getAttachedScrap"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintLeft_toRightOf="@id/addItem"/>
+
+    <Button
+            android:id="@+id/changeItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="changeItem"
+            app:layout_constraintTop_toBottomOf="@id/getAttachedScrap"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintLeft_toRightOf="@id/deleteItem"/>
+
+
+    <com.demo.recycleview.BaseRecycleVIew
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/addItem"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+
+</android.support.constraint.ConstraintLayout>
